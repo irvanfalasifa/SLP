@@ -31,23 +31,6 @@ h1 {
   white-space: nowrap;
 }
 
-.btn {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: 50%;
-  top: 40%;
-  transform: translateX(-50%);
-  text-decoration: none;
-  color: #fff;
-  border: #fff solid 0.2rem;
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  width: 15rem;
-  padding: 1.5rem;
-}
 
 .split.left .btn:hover {
   background-color: var(--left-btn-hover-color);
@@ -135,5 +118,53 @@ h1 {
   .btn {
     padding: 1.2rem;
     width: 12rem;
+  }
+}
+
+.btn {
+  position:absolute;
+  left: 50%;
+  top: 40%;
+  
+}
+
+a {
+  color: #fff;
+  border: #fff solid 0.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 10px 0;
+  position: absolute;
+  width: 15rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  transform: translateX(-50%);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:focus {
+  outline: none;
+}
+
+a .circle {
+  position: absolute;
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-60%, -40%) scale(0);
+  animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-60%, -40%) scale(3);
+    opacity: 0;
   }
 }
